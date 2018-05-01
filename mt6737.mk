@@ -199,6 +199,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/ecc_list.xml:system/etc/ecc_list.xml \
     $(COMMON_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
 
+# Vendor Interface Manifest
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/manifest.xml:system/vendor/manifest.xml
+
 # WIFI
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
