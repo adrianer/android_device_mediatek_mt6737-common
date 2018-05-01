@@ -133,10 +133,10 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
-    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/etc/default_volume_tables.xml \
-    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/etc/r_submix_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/vendor/etc/audio_policy_volumes.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/vendor/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/vendor/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/vendor/etc/usb_audio_policy_configuration.xml
 
 # Codecs
 PRODUCT_COPY_FILES += \
@@ -155,7 +155,7 @@ endif
 
 # GPS
 PRODUCT_COPY_FILES += \
-     $(COMMON_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
+     $(COMMON_PATH)/configs/agps_profiles_conf2.xml:system/vendor/etc/agps_profiles_conf2.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -195,9 +195,9 @@ PRODUCT_COPY_FILES += \
 
 # Telephony
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml \
-    $(COMMON_PATH)/configs/ecc_list.xml:system/etc/ecc_list.xml \
-    $(COMMON_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
+    $(COMMON_PATH)/configs/apns-conf.xml:system/vendor/etc/apns-conf.xml \
+    $(COMMON_PATH)/configs/ecc_list.xml:system/vendor/etc/ecc_list.xml \
+    $(COMMON_PATH)/configs/spn-conf.xml:system/vendor/etc/spn-conf.xml
 
 # Vendor Interface Manifest
 PRODUCT_COPY_FILES += \
@@ -205,9 +205,9 @@ PRODUCT_COPY_FILES += \
 
 # WIFI
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+    $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:system/vendor/etc/wifi/wpa_supplicant.conf \
+    $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/vendor/etc/wifi/wpa_supplicant_overlay.conf \
+    $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/vendor/etc/wifi/p2p_supplicant_overlay.conf
 
 #### Props ####
 
