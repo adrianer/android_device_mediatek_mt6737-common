@@ -88,10 +88,6 @@ PRODUCT_PACKAGES += \
     librs_jni \
     libnl_2
 
-# MTK Engineer Mode
-PRODUCT_PACKAGES += \
-    EngineerMode
-
 # Power
 PRODUCT_PACKAGES+= \
     android.hardware.power@1.0-impl
@@ -124,10 +120,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
     android.hardware.wifi@1.0-service \
     wificond \
-
-# YGPS
-PRODUCT_PACKAGES += \
-    YGPS
 
 #### Copy files ####
 
