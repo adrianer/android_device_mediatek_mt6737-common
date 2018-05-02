@@ -28,8 +28,8 @@
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
-    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option
+    <bool name="config_intrusiveBatteryLed">true</bool> -->
 	
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
@@ -132,7 +132,7 @@
             32 - Camera
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
+         config to 7.
     <integer name="config_deviceHardwareKeys">79</integer>
 
     <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
@@ -146,8 +146,8 @@
             32 - Camera
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">79</integer>
+         config to 7. 
+    <integer name="config_deviceHardwareWakeKeys">79</integer> -->
 
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
     <bool name="config_useRoundIcon">true</bool>
@@ -166,14 +166,14 @@
          This resource should be set to "true" when a doze component has been specified
          to maximize power savings but not all devices support it.
          Refer to power.h for details.
-    -->    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+        <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool> -->
 
     <!-- Control whether Night display is available. This should only be enabled on devices
          with HWC 2.0 or higher. -->
     <bool name="config_nightDisplayAvailable">true</bool>
 
-    <!-- disable button backlight settings -->
-    <integer name="config_buttonBrightnessSettingDefault">0</integer>
+    <!-- disable button backlight settings 
+    <integer name="config_buttonBrightnessSettingDefault">0</integer> -->
 
     <!-- Enable doze mode
          ComponentName of a dream to show whenever the system would otherwise have
@@ -221,7 +221,7 @@
          in darkness (although they may not be visible in a bright room). -->
     <integer name="config_screenBrightnessDark">7</integer>
 		
-    <!-- Whether to use TMO LTE singnal strength threshold -->
+    <!-- Whether to use TMO LTE singnal strength threshold
     <bool name="config_regional_lte_singnal_threshold">true</bool>
     
     <integer-array name="lte_signal_strength_threshold">
@@ -231,7 +231,7 @@
         <item>-115</item>
         <item>-105</item>
         <item>-44</item>
-    </integer-array>      
+    </integer-array> -->      
 
     <!-- If supported, are dreams enabled? (by default) -->
     <bool name="config_dreamsEnabledByDefault">false</bool>

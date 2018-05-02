@@ -45,8 +45,8 @@ PRODUCT_PACKAGES += \
     libion
 
 # Doze
-PRODUCT_PACKAGES += \
-    Doze
+#PRODUCT_PACKAGES += \
+#    Doze
 
 # FMRadio
 PRODUCT_PACKAGES += \
@@ -117,7 +117,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
     android.hardware.wifi@1.0-service \
     wificond \
 
@@ -215,16 +215,12 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.service.acm.enable=0 \
     persist.radio.apn_delay=5000 \
     persist.sys.media.use-awesome=false \
-    media.stagefright.use-awesome=false
-
-# Disable ADB Security
-ADDITIONAL_DEFAULT_PROPERTIES += \
+    media.stagefright.use-awesome=false \
     ro.secure=0 \
     ro.allow.mock.location=1 \
     ro.debuggable=1 \
     ro.adb.secure=0 \
-    ro.oem_unlock_supported=1 \
-    sys.usb.config=mtp,adb
+    ro.oem_unlock_supported=1
 
 # IO Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -287,7 +283,7 @@ EXTENDED_FONT_FOOTPRINT := true
 BOARD_USES_MTK_HARDWARE := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
 
 # Wifi
 BOARD_WLAN_DEVICE := MediaTek
