@@ -33,10 +33,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
-# Doze
-PRODUCT_PACKAGES += \
-    Doze
-
 # Misc
 PRODUCT_PACKAGES += \
     librs_jni \
