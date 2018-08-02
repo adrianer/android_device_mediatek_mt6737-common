@@ -46,13 +46,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    Snap
 
-# Symbols
-PRODUCT_PACKAGES += \
-    libshim_ui \
-    libshim_gui \
-    libshim_ifc \
-    libshim_misc
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
@@ -78,10 +71,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml
-
-# GPS
-PRODUCT_COPY_FILES += \
-     $(COMMON_PATH)/configs/agps_profiles_conf2.xml:system/vendor/etc/agps_profiles_conf2.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -117,23 +106,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.manual_sensor.xml:system/etc/permissions/android.hardware.camera.manual_sensor.xml \
     frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
-
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir,root)
-
-# Telephony
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/ecc_list.xml:system/etc/ecc_list.xml \
-#   $(COMMON_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml \
-#   $(COMMON_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
-
-# WIFI
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 #### Props ####
 
@@ -159,16 +131,11 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 # Common Properties
 TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
 
-# Cyanogenmod H/W Hooks
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS := $(COMMON_PATH)/cmhw
-
 # Dalvik Tweak
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Dexpreopt
-WITH_DEXPREOPT := true
-DONT_DEXPREOPT_PREBUILTS := true
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
@@ -184,21 +151,6 @@ USE_MINIKIN := true
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
-
-# Light HAL
-TARGET_PROVIDES_LIBLIGHT := true
-
-# MTK Hardware
-BOARD_USES_MTK_HARDWARE := true
-
-# RIL
-BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril
-
-# Seccomp filter
-BOARD_SECCOMP_POLICY := $(COMMON_PATH)/seccomp
-
-# SELinux
-BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
 
 # Wifi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
